@@ -6,7 +6,7 @@ void add();
 void subtract();
 
 
-int main (void) {
+void main () {
 
 	printWelcomeMenu();
 
@@ -26,7 +26,6 @@ int main (void) {
 		subtract();
 		break;
 	}
-	return 0;
 }
 
 void printWelcomeMenu() {
