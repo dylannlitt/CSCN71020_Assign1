@@ -3,9 +3,10 @@
 void printWelcomeMenu();
 void printOptions();
 void add();
+void subtract();
 
 
-void main() {
+int main (void) {
 
 	printWelcomeMenu();
 
@@ -20,8 +21,12 @@ void main() {
 	{
 	case 1:
 		add();
+		break;
+	case 2:
+		subtract();
+		break;
 	}
-
+	return 0;
 }
 
 void printWelcomeMenu() {
@@ -44,4 +49,16 @@ void add() {
 	scanf_s("%lf", &num2);
 	result = num1 + num2;
 	printf("%lf + %lf = %lf\n", num1, num2, result);
+}
+
+
+void subtract() {
+	double num1, num2, result;
+	printf("Enter the first value you want to get subtracted:");
+	scanf_s("%lf", &num1);
+	printf("Enter the second value you want to subract from the first:");
+	scanf_s("%lf", &num2);
+
+	result = num1 - num2;
+	printf("%0.2lf - %0.2lf = %0.2lf\n", num1, num2, result);
 }
